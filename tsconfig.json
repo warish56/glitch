@@ -4,7 +4,8 @@
     "baseUrl": "./src",
     "paths": {
       "@common/*": ["common/*"],
-      "@routes/*": ["routes/*"]
+      "@routes/*": ["routes/*"],
+      "@screens/*": ["screens/*"]
     }
   }
 }

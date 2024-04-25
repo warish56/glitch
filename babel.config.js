@@ -8,6 +8,7 @@ module.exports = {
           // This needs to be mirrored in tsconfig.json
           '@common': './src/common',
           '@routes': './src/routes',
+          '@screens': './src/screens',
         },
       },
     ],

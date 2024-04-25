@@ -12,4 +12,5 @@ export const appColors = {
   error: colors.red,
   success: colors.green,
   warning: colors.yellow,
+  background: colors.white,
 };

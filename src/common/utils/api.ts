@@ -1,14 +1,14 @@
-import {appTokenData} from './token';
+import {tokenStore} from './externalStore';
 
 const middleware = {
   json: (res: Response) => res.json(),
 };
 
 const createFetchFactory = () => {
-  const {getToken} = appTokenData;
+  const {getValue} = tokenStore;
 
   const fetcher: typeof fetch = async (...args) => {
-    let token = await getToken();
+    let token = getValue();
     return fetch(args[0], {
       ...args[1],
       headers: {
