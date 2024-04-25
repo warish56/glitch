@@ -8,8 +8,8 @@ type props = {
 export const SafeAreaWrapper = ({children}: props) => {
   const insets = useSafeAreaInsets();
   return (
-    // eslint-disable-next-line react-native/no-inline-styles
     <View
+      // eslint-disable-next-line react-native/no-inline-styles
       style={{
         flex: 1,
         // paddingTop: insets.top,
