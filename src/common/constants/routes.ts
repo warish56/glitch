@@ -6,9 +6,13 @@ export const ROUTES = {
     BASE_STACK_URL: 'AUTH',
     login: 'LOGIN',
   },
-  home: {
-    BASE_STACK_URL: 'HOME',
-    main: 'MAIN',
+  main: {
+    BASE_STACK_URL: 'MAIN',
+    home: 'HOME',
+    chat: 'CHAT',
+    feed: 'FEED',
+    info: 'INFO',
+    profile: 'PROFILE',
   },
 } as const;
 

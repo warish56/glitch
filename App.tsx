@@ -6,13 +6,13 @@
  */
 
 import {AppProvider} from '@common/utils/Provider';
-import {MainRoutes} from '@routes/root';
+import {RootRoutes} from '@routes/root';
 import React from 'react';
 
 function App() {
   return (
     <AppProvider>
-      <MainRoutes />
+      <RootRoutes />
     </AppProvider>
   );
 }

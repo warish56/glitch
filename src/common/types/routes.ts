@@ -5,8 +5,8 @@ type RootRoute = {
   [ROUTES.auth.BASE_STACK_URL]: {
     screen: AppRouteType['auth'][keyof AppRouteType['auth']];
   };
-  [ROUTES.home.BASE_STACK_URL]: {
-    screen: AppRouteType['home'][keyof AppRouteType['home']];
+  [ROUTES.main.BASE_STACK_URL]: {
+    screen: AppRouteType['main'][keyof AppRouteType['main']];
   };
 };
 

@@ -4,9 +4,10 @@ import {ROUTES} from '@common/constants/routes';
 import {AuthRoutes} from './auth';
 import {useToken} from '@common/hooks/useToken';
 import {InitScreen} from '@screens/Init';
+import {MainRoutes} from './main';
 const Stack = createStackNavigator();
 
-export const MainRoutes = () => {
+export const RootRoutes = () => {
   const {token} = useToken();
   return (
     <Stack.Navigator initialRouteName={ROUTES.init.BASE_STACK_URL}>
@@ -26,7 +27,7 @@ export const MainRoutes = () => {
       />
       {token ? (
         <Stack.Screen
-          name={ROUTES.home.BASE_STACK_URL}
+          name={ROUTES.main.BASE_STACK_URL}
           options={{
             headerShown: false,
           }}
