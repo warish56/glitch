@@ -1,13 +1,13 @@
 export const titleFontSize = {
-  sm: 20,
-  md: 30,
-  lg: 40,
-  xl: 50,
+  sm: 18,
+  md: 20,
+  lg: 22,
+  xl: 25,
 };
 
 export const bodyFontSize = {
-  sm: 12,
+  xsm: 10,
+  sm: 13,
   md: 16,
   lg: 18,
-  xl: 20,
 };

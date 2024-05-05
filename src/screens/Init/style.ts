@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     gap: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: THEME.colors.background,
+    backgroundColor: THEME.colors.background.screen,
   },
   text: {
     fontSize: THEME.fontSize.body.md,
