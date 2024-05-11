@@ -1,5 +1,6 @@
 export const API_ROUTES = {
-  login: () => `/login`,
+  loginOtp: () => `/login`,
+  verifyOtp: () => `/verify`,
   componentsStyle: () => `/styles`,
   expo: (category: string, tag: string) => `/expo/${category}/${tag}`,
   screen: (screenName: string) => `/screen/${screenName}`,

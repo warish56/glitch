@@ -11,7 +11,7 @@ export const AuthRoutes = () => {
       <Stack.Screen
         name={ROUTES.auth.login}
         options={{
-          title: 'Login',
+          headerShown: false,
         }}
         component={LoginScreen}
       />

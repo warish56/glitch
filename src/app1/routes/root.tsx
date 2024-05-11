@@ -3,9 +3,9 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {ROUTES} from '@common/constants/routes';
 import {AuthRoutes} from './auth';
 import {useToken} from '@common/hooks/useToken';
-// import {InitScreen} from '@screens/Init';
 import {MainRoutes} from './main';
-import {ExpoScreen} from '@app1Screens/Expo';
+import {InitScreen} from '@app1Screens/Init';
+
 const Stack = createStackNavigator();
 
 export const RootRoutes = () => {
@@ -17,7 +17,7 @@ export const RootRoutes = () => {
         options={{
           headerShown: false,
         }}
-        component={ExpoScreen}
+        component={InitScreen}
       />
       <Stack.Screen
         name={ROUTES.auth.BASE_STACK_URL}

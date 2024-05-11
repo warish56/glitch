@@ -1,5 +1,5 @@
 import {appColors} from './colors';
-import {bodyFontSize, titleFontSize} from './fontSize';
+import {bodyFontSize, btnFontSize, titleFontSize} from './fontSize';
 
 export const componentsColors = {
   filterBtn: {
@@ -30,6 +30,23 @@ export const componentsColors = {
     text: {
       color: appColors.textDark,
       size: bodyFontSize.sm,
+    },
+  },
+  textField: {
+    label: {
+      size: titleFontSize.sm,
+      color: appColors.textDark,
+    },
+    input: {
+      border: appColors.border,
+      activeBorder: appColors.activeBorder,
+    },
+  },
+  button: {
+    main: {
+      size: btnFontSize.md,
+      color: appColors.textDark,
+      background: appColors.primary,
     },
   },
 };

@@ -13,7 +13,7 @@ export const InitScreen = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      if (!token) {
+      if (token) {
         navigation.replace('MAIN', {screen: 'HOME'});
       } else {
         navigation.replace('AUTH', {screen: 'LOGIN'});
