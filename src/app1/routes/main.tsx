@@ -1,13 +1,13 @@
 import React from 'react';
-import {HomeScreen} from '@screens/Home';
+import {HomeScreen} from '@app1Screens/Home';
 import {ROUTES} from '@common/constants/routes';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Image, ImageSourcePropType} from 'react-native';
 // import homeSvg from '@common/assets/home.svg';
-import {ChatScreen} from '@screens/Chat';
-import {FeedScreen} from '@screens/Feed';
-import {InfoScreen} from '@screens/Info';
-import {ProfileScreen} from '@screens/Profile';
+import {ChatScreen} from '@app1Screens/Chat';
+import {FeedScreen} from '@app1Screens/Feed';
+import {InfoScreen} from '@app1Screens/Info';
+import {ProfileScreen} from '@app1Screens/Profile';
 
 const homeImg = require('@common/assets/home.png');
 const chatImg = require('@common/assets/chat.png');

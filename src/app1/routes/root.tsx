@@ -5,7 +5,7 @@ import {AuthRoutes} from './auth';
 import {useToken} from '@common/hooks/useToken';
 // import {InitScreen} from '@screens/Init';
 import {MainRoutes} from './main';
-import {ExpoScreen} from '@screens/Expo';
+import {ExpoScreen} from '@app1Screens/Expo';
 const Stack = createStackNavigator();
 
 export const RootRoutes = () => {
