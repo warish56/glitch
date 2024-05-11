@@ -7,8 +7,8 @@ module.exports = {
         alias: {
           // This needs to be mirrored in tsconfig.json
           '@common': './src/common',
-          '@routes': './src/routes',
-          '@screens': './src/screens',
+          '@app1Routes': './src/app1/routes',
+          '@app1Screens': './src/app1/screens',
         },
       },
     ],

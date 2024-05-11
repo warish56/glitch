@@ -1,6 +1,6 @@
 import React from 'react';
 import {button, image, chip, text, tabs} from '@common/types/layout';
-import {Button} from '@common/components/Button';
+// import {Button} from '@common/components/Button';
 import {Image, Text} from 'react-native';
 import {Chip} from '@common/components/Chip';
 
@@ -11,10 +11,10 @@ export const ChildRenderer = ({data}: props) => {
   const {type} = data;
 
   switch (type) {
-    case 'button': {
-      const {textStyle, title, style} = data;
-      return <Button textStyle={textStyle} title={title} style={style} />;
-    }
+    // case 'button': {
+    //   const {textStyle, title, style} = data;
+    //   return <Button textStyle={textStyle} title={title} style={style} />;
+    // }
     case 'text': {
       const {title, style} = data;
       return <Text style={style}>{title}</Text>;

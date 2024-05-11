@@ -5,8 +5,8 @@
  * @format
  */
 
+import {RootRoutes} from '@app1Routes/root';
 import {AppProvider} from '@common/utils/Provider';
-import {RootRoutes} from '@routes/root';
 import React from 'react';
 
 function App() {

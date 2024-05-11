@@ -21,7 +21,10 @@ export const appColors = {
   background: {
     purple: colors.lightpurple,
     screen: colors.mediumCream,
+    white: colors.white,
   },
+  border: colors.black,
+  activeBorder: colors.blue,
   error: colors.red,
   success: colors.green,
   warning: colors.yellow,
