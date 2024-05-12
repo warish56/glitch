@@ -49,4 +49,12 @@ export const componentsColors = {
       background: appColors.primary,
     },
   },
+  snackbar: {
+    error: appColors.error,
+    success: appColors.success,
+    warning: appColors.warning,
+    info: appColors.secondary,
+    size: bodyFontSize.md,
+    color: appColors.textLight,
+  },
 };

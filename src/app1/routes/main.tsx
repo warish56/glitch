@@ -3,16 +3,13 @@ import {HomeScreen} from '@app1Screens/Home';
 import {ROUTES} from '@common/constants/routes';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Image, ImageSourcePropType} from 'react-native';
-// import homeSvg from '@common/assets/home.svg';
-import {ChatScreen} from '@app1Screens/Chat';
-import {FeedScreen} from '@app1Screens/Feed';
-import {InfoScreen} from '@app1Screens/Info';
+import {EventsScreen} from '@app1Screens/Events';
+import {SpecificEventScreen} from '@app1Screens/SpecificEvent';
 import {ProfileScreen} from '@app1Screens/Profile';
 
 const homeImg = require('@common/assets/home.png');
 const chatImg = require('@common/assets/chat.png');
 const feedImg = require('@common/assets/pic.png');
-const infoImg = require('@common/assets/info.png');
 const profileImg = require('@common/assets/profile.jpeg');
 
 const Tab = createBottomTabNavigator();
@@ -24,9 +21,8 @@ const getTabImage =
   };
 
 const getHomeImage = getTabImage(homeImg);
-const getChatImage = getTabImage(chatImg);
-const getFeedImage = getTabImage(feedImg);
-const getInfoImage = getTabImage(infoImg);
+const getEventsImage = getTabImage(chatImg);
+const getEventImage = getTabImage(feedImg);
 const getProfileImage = getTabImage(profileImg);
 
 export const MainRoutes = () => {
@@ -43,33 +39,23 @@ export const MainRoutes = () => {
       />
 
       <Tab.Screen
-        name={ROUTES.main.chat}
+        name={ROUTES.main.events}
         options={{
-          title: 'Chat',
-          tabBarLabel: 'Chat',
-          tabBarIcon: getChatImage,
+          title: 'Events',
+          tabBarLabel: 'Events',
+          tabBarIcon: getEventsImage,
         }}
-        component={ChatScreen}
+        component={EventsScreen}
       />
 
       <Tab.Screen
-        name={ROUTES.main.feed}
+        name={ROUTES.main.event}
         options={{
-          title: 'Feed',
-          tabBarLabel: 'Feed',
-          tabBarIcon: getFeedImage,
+          title: 'Event',
+          tabBarLabel: 'Event',
+          tabBarIcon: getEventImage,
         }}
-        component={FeedScreen}
-      />
-
-      <Tab.Screen
-        name={ROUTES.main.info}
-        options={{
-          title: 'Info',
-          tabBarLabel: 'Info',
-          tabBarIcon: getInfoImage,
-        }}
-        component={InfoScreen}
+        component={SpecificEventScreen}
       />
 
       <Tab.Screen

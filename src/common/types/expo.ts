@@ -1,3 +1,5 @@
+import {dataResponse} from './response';
+
 export type tag = {
   title: string;
   id: string;
@@ -16,7 +18,4 @@ export type expo = {
   list: ExpoUser[];
 };
 
-export type serverResponse<T> = {
-  data: T;
-};
-export type expoResponse = Promise<serverResponse<expo>>;
+export type expoResponse = Promise<dataResponse<expo>>;

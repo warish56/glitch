@@ -1,10 +1,10 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 
-export const FeedScreen = () => {
+export const SpecificEventScreen = () => {
   return (
     <View>
-      <Text>Feed screen</Text>
+      <Text>Specific event screen</Text>
     </View>
   );
 };

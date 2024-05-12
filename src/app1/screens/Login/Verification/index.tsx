@@ -2,6 +2,7 @@
 import React, {
   ForwardedRef,
   useImperativeHandle,
+  useMemo,
   useRef,
   useState,
 } from 'react';
@@ -67,9 +68,10 @@ const OtpInput = React.forwardRef(
 type props = {
   isLoading: boolean;
   onVerify: (otp: string) => void;
+  phoneOrEmail: string;
 };
 
-export const OtpVerification = ({isLoading, onVerify}: props) => {
+export const OtpVerification = ({isLoading, onVerify, phoneOrEmail}: props) => {
   const [text, setText] = useState({
     0: '',
     1: '',
@@ -108,6 +110,10 @@ export const OtpVerification = ({isLoading, onVerify}: props) => {
       }
     }
   };
+  const lastDigits = useMemo(() => {
+    const data = phoneOrEmail.split('');
+    return `${data[data.length - 1]}${data[data.length - 2]}`;
+  }, [phoneOrEmail]);
   return (
     <View style={styles.content}>
       <Gap gap={10}>
@@ -116,7 +122,7 @@ export const OtpVerification = ({isLoading, onVerify}: props) => {
             Verify OTP
           </Typography>
           <Typography variant="title" size="sm">
-            Code is sent to XXXXXXXX34
+            Code is sent to XXXXXXXX{lastDigits}
           </Typography>
         </View>
 
