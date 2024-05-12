@@ -1,8 +1,9 @@
 import {tokenStore} from '@common/utils/externalStore';
-import {useEffect, useSyncExternalStore} from 'react';
+import {useEffect, useState, useSyncExternalStore} from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const useToken = () => {
+  const [hasInitialValue, setHasInitialValue] = useState(false);
   const tokenKey = 'glitch_tk';
 
   const tokenData = useSyncExternalStore(
@@ -25,7 +26,9 @@ export const useToken = () => {
 
   const initializeToken = async () => {
     const token = await getTokenFromLocalStorage();
-    setToken(token || '');
+    setToken(token || '').then(() => {
+      setHasInitialValue(true);
+    });
   };
 
   // used to get the token from local storge fro the first time if initially empty
@@ -39,5 +42,6 @@ export const useToken = () => {
   return {
     setToken,
     token: tokenData.value,
+    hasInitialValue,
   };
 };
