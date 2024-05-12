@@ -8,19 +8,20 @@ import styles from './style';
 import {THEME} from '@common/theme';
 
 export const InitScreen = () => {
-  const {token} = useToken();
+  const {token, hasInitialValue} = useToken();
   const navigation = useNavigation<RootNavigator>();
 
   useEffect(() => {
-    setTimeout(() => {
-      if (token) {
-        navigation.replace('MAIN', {screen: 'HOME'});
-      } else {
-        navigation.replace('AUTH', {screen: 'LOGIN'});
-      }
-    }, 3000);
+    if (!hasInitialValue) {
+      return;
+    }
+    if (token) {
+      navigation.replace('MAIN', {screen: 'HOME'});
+    } else {
+      navigation.replace('AUTH', {screen: 'LOGIN'});
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [token, hasInitialValue]);
 
   return (
     <View style={styles.cont}>

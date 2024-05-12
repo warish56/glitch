@@ -9,9 +9,8 @@ export const ROUTES = {
   main: {
     BASE_STACK_URL: 'MAIN',
     home: 'HOME',
-    chat: 'CHAT',
-    feed: 'FEED',
-    info: 'INFO',
+    events: 'EVENTS',
+    event: 'EVENT',
     profile: 'PROFILE',
   },
 } as const;

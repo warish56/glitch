@@ -1,10 +1,10 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 
-export const InfoScreen = () => {
+export const EventsScreen = () => {
   return (
     <View>
-      <Text>Info screen</Text>
+      <Text>Events screen</Text>
     </View>
   );
 };
