@@ -31,7 +31,6 @@ const Stack = createStackNavigator();
 
 export const RootRoutes = () => {
   const {token} = useToken();
-  console.log('==token==', {token});
   return (
     <RoutesWrapper>
       <Stack.Navigator initialRouteName={ROUTES.init.BASE_STACK_URL}>
