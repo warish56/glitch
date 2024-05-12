@@ -47,6 +47,7 @@ export const LoginScreen = () => {
             <OtpVerification
               onVerify={onVerifyOtp}
               isLoading={verifyMutation.isPending}
+              phoneOrEmail={phoneOrEmail}
             />
           ) : (
             <PhoneOrEmail
